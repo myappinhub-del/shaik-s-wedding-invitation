@@ -1,0 +1,6 @@
+{
+  "name": "Shaik's Wedding Invitation | Mahaboob Jani & Suhana Kareema",
+  "description": "Two-slide animated Islamic wedding invitation presentation for Shaik Mahaboob Jani & Suhana Kareema Aafreen featuring side-by-side book presentation and mobile swipe.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

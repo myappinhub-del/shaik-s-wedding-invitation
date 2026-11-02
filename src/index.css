@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --gold-1: #d4af37;
+    --gold-2: #f3e5ab;
+    --gold-3: #aa771c;
+    --emerald-dark: #072e21;
+    --emerald-deep: #031c14;
+    --ivory-base: #fcfbf7;
+    --ivory-warm: #f6f1e7;
+  }
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-amiri {
+  font-family: 'Amiri', serif;
+}
+
+.font-script {
+  font-family: 'Great Vibes', cursive;
+}
+
+/* Metallic gold gradients */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #d4af37 0%, #fff2be 35%, #b98e2c 70%, #f6e39f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-foil-border {
+  border-image: linear-gradient(135deg, #c5a059, #f7e6b5, #9b7228, #dfb76c, #805c19) 1;
+}
+
+.gold-box-border {
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  box-shadow: inset 0 0 12px rgba(212, 175, 55, 0.08), 0 0 8px rgba(212, 175, 55, 0.15);
+}
+
+.gold-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.gold-shimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 30%,
+    rgba(255, 235, 170, 0.25) 50%,
+    transparent 70%
+  );
+  transform: rotate(25deg);
+  animation: shimmer 5s infinite;
+  pointer-events: none;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%) rotate(25deg); }
+  35% { transform: translateX(100%) rotate(25deg); }
+  100% { transform: translateX(100%) rotate(25deg); }
+}
+
+/* Realistic 3D perspective and book shadow styles */
+.perspective-2000 {
+  perspective: 2000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Subtle book spine crease shadow for 2-page spread */
+.book-spine-left {
+  box-shadow: inset -24px 0 28px -18px rgba(35, 25, 10, 0.45),
+              inset 0 0 10px rgba(197, 160, 89, 0.15);
+}
+
+.book-spine-right {
+  box-shadow: inset 24px 0 28px -18px rgba(35, 25, 10, 0.45),
+              inset 0 0 10px rgba(197, 160, 89, 0.15);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #031c14;
+}
+::-webkit-scrollbar-thumb {
+  background: #c5a059;
+  border-radius: 3px;
+}
